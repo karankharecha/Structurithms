@@ -73,7 +73,7 @@ public class VintageSorts {
 
     private static <T> void quickSortOperation(Object[] arr, int first, int last, Comparator<T> comparator){
         if(first < last){
-            Object pivot = (T)arr[last];
+            Object pivot = arr[last];
             int i = (first - 1);
             for (int j=first;j<last;j++){
                 if(comparator.compare((T)arr[j], (T)pivot) <= 0){
