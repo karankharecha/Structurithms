@@ -77,8 +77,7 @@ public class VintageSorts {
             int i = (first - 1);
             for (int j=first;j<last;j++){
                 if(comparator.compare((T)arr[j], (T)pivot) <= 0){
-                    i++;
-                    Object temp = arr[i];
+                    Object temp = arr[++i];
                     arr[i] = arr[j];
                     arr[j] = temp;
                 }
@@ -98,8 +97,7 @@ public class VintageSorts {
             int i = (first - 1);
             for (int j=first;j<last;j++){
                 if(((Comparable)arr[j]).compareTo(pivot) <= 0){
-                    i++;
-                    Object temp = arr[i];
+                    Object temp = arr[++i];
                     arr[i] = arr[j];
                     arr[j] = temp;
                 }
