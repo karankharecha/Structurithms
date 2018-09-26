@@ -10,7 +10,7 @@ public class VintageSorts {
         mergeSortOperation(array,0, array.length-1, comparator);
         for (int i=0;i<array.length;i++){
             list.set(i, (T)array[i]);
-        }
+        } // end of for loop
     }
 
     public static <T> void mergeSort(List<T> list){
