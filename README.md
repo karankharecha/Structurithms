@@ -1,6 +1,6 @@
 # Structurithms
 
-Collection of Data Structure and Algorithms
+Collection of Data Structures and Algorithms
 
 ## List of Algorithms included:
   1) Merge Sort
