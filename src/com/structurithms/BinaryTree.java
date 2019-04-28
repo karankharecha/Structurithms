@@ -76,7 +76,7 @@ public class BinaryTree {
         HashMap<Integer, ArrayList<Node>> levelsMap = new HashMap<>();
         int level = 0;
         if (kNode != null){
-            ArrayList<Node> parentList = new ArrayList<>(){{add(alpha);}};
+            ArrayList<Node> parentList = new ArrayList<Node>(){{add(alpha);}};
             ArrayList<Node> childList = new ArrayList<>();
             while(isUpperLevel){
                 ArrayList<Node> elements = getChildNodes(parentList, childList);
