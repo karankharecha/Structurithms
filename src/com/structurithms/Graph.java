@@ -13,7 +13,7 @@ public class Graph {
 
     private HashSet<HashSet<String>> kUniversal = new HashSet<>();
     private ArrayList<Edge> kruskalEdges = new ArrayList<>();
-    private HashSet<String> subSet1,subSet2;
+    private HashSet<String> subSet1, subSet2;
     private Integer totalCost;
 
     private HashSet<HashSet<String>> pUniversal = new HashSet<>();
@@ -82,13 +82,14 @@ public class Graph {
     }
 
     private void getSelectedEdges() {
-        for (Edge target : tempEdges) {
+        for (int i = 0; i < tempEdges.size(); i++) {
+            Edge target = tempEdges.get(i);
             if (target.src.alias.equals(selectedNode)) {
                 operationalEdges.add(target);
             } else if (target.dest.alias.equals(selectedNode)) {
-                String temp = target.src.alias;
-                target.src.alias = target.dest.alias;
-                target.dest.alias = temp;
+                GraphNode dest = target.src;
+                target.src = target.dest;
+                target.dest = dest;
                 operationalEdges.add(target);
             }
         }
